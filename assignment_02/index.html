@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<meta charset="UTF-8">
+	  <meta name="description" content="Shopping Cart">
+	  <meta name="keywords" content="Shopping Cart">
+	  <meta name="author" content="Twyla Zhang">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+
+	img{
+		height: 250px;
+		width: auto;
+	
+	}
+
+	#item1, #item2, #item3{
+		margin: 150px 70px 100px 90px;
+		float: left;
+	}
+
+	#item1 > p, #item2 > p, #item3 > p {
+		text-align: center;
+		font-size: 2em;
+	}
+
+	#header{
+		background-color: pink;
+		padding: 10px 0px;
+		margin: 0px 0px 50px 0px;
+		text-align: center;
+	}
+
+	#footer{
+		background-color: lightgrey;
+		color: #FFF;
+		padding: 3px 0px;
+		margin: 40px 0px 0px 0px;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.clearfloat{
+		clear: both;
+	}
+
+
+	#container{
+		background-color: lightblue;
+		width: 1100px;
+		margin: 0px auto;
+		height: 700px;
+	}
+
+	#cart{
+		text-align: center;
+		font-size: 2em;
+		margin: 10px;
+	}
+
+
+	body{
+		background-color: aliceblue;
+
+	}
+
+	
+</style>
+</head>
+
+<body>
+
+	<!-- header -->
+	<div id="header">
+        <h1>Welcome to the Makeup Store</h1> 
+    </div>
+
+	<!-- container -->
+    <div id="container">
+
+    	<!-- eyeshadow -->
+    	<div id="item1">
+		<img src="img/eyeshadow.jpeg" alt="eyeshadow">
+		<p>$<span id="eye">32</span></p>
+		</div>
+
+		<!-- foundation -->
+		<div id="item2">
+		<img src="img/foundation.jpg" alt="foundation">
+		<p>$<span id="foundation">57</span></p>
+		</div>
+
+		<!-- spray -->
+		<div id="item3">
+		<img src="img/spray.png" alt="spray">
+		<p>$<span id="spray">36</span></p>
+		</div>
+		
+		<div class="clearfloat"></div>
+
+
+		<!-- total -->
+		<p id="cart">Cart Subtotal: $<span id="total">0</span></p>
+
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+	<p> @makeup products </p>
+	</div>
+
+
+
+<script>
+
+		
+/*
+		Workflow:
+				1. create a global variable called "total" to store the subtotal price
+				2. When user clicks on a the product, save product price in a variable "price".
+				3. Convert 'value' to a numeric value using parseInt().
+				4. add value to variable 'total'.
+				5. Display the new value to users.
+		*/
+
+var total = 0;
+
+//add the price of eyeshadow to subtotal 
+document.querySelector('#item1').onclick = function(){
+			// 2. save product price in a variable "value".
+			var price = document.querySelector('#eye').innerHTML;
+
+			// 3. Convert 'value' to a numeric value using parseInt().
+			price = parseInt(price);
+
+			// 4. add value to variable 'total'.
+			total = total + price;
+
+			console.log( total );
+			// 5. Display the new value.
+			
+			document.querySelector('#total').innerHTML = total;
+			
+		};
+
+//add the price of foundation to subtotal 
+document.querySelector('#item2').onclick = function(){
+			// 2. save product price in a variable "price".
+			var price = document.querySelector('#foundation').innerHTML;
+
+			// 3. Convert 'value' to a numeric value using parseInt().
+			price = parseInt(price);
+
+			// 4. add value to variable 'total'.
+			total = total + price;
+
+			// 5. Display the new value.
+			document.querySelector('#total').innerHTML = total;
+			
+		};
+
+//add the price of spray to subtotal 
+document.querySelector('#item3').onclick = function(){
+			// 2. save product price in a variable "price".
+			var price = document.querySelector('#spray').innerHTML;
+
+			// 3. Convert 'value' to a numeric value using parseInt().
+			price = parseInt(price);
+
+			// 4. add value to variable 'total'.
+			total = total + price;
+
+	
+			// 5. Display the new value.
+			document.querySelector('#total').innerHTML = total;
+			
+		};
+
+
+</script>
+
+
+
+</body>
+</html>
