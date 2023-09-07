@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<style>
+		#display {
+			font-size: 2em;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12 text-center mt-5">JS Calculator</h1>
+		</div> <!-- .row -->
+		<div class="row">
+			<div id="calculator" class="mt-4 col-12 col-md-6 ml-md-auto mr-md-auto col-lg-4">
+				<div class="row">
+					<input type="text" id="display" class="col-12 text-right form-control" value="0">
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="clear" class="col-9 btn btn-lg btn-outline-dark">AC</button>
+					<button id="divide" class="col-3 btn btn-lg btn-outline-dark">/</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="seven" class="col-3 btn btn-lg btn-outline-dark">7</button>
+					<button id="eight" class="col-3 btn btn-lg btn-outline-dark">8</button>
+					<button id="nine" class="col-3 btn btn-lg btn-outline-dark">9</button>
+					<button id="multiply" class="col-3 btn btn-lg btn-outline-dark">x</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="four" class="col-3 btn btn-lg btn-outline-dark">4</button>
+					<button id="five" class="col-3 btn btn-lg btn-outline-dark">5</button>
+					<button id="six" class="col-3 btn btn-lg btn-outline-dark">6</button>
+					<button id="minus" class="col-3 btn btn-lg btn-outline-dark">-</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="one" class="col-3 btn btn-lg btn-outline-dark">1</button>
+					<button id="two" class="col-3 btn btn-lg btn-outline-dark">2</button>
+					<button id="three" class="col-3 btn btn-lg btn-outline-dark">3</button>
+					<button id="plus" class="col-3 btn btn-lg btn-outline-dark">+</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="zero" class="col-6 btn btn-lg btn-outline-dark">0</button>
+					<button id="dot" class="col-3 btn btn-lg btn-outline-dark">.</button>
+					<button id="equal" class="col-3 btn btn-lg btn-outline-dark">=</button>
+				</div> <!-- .row -->
+			</div> <!-- #calculator -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+
+	<script>
+
+		/*
+			Workflow :
+			1. Whenever the user presses a number, append that value to display_num1, and update the display with that number 
+			2. If the user presses an operation, save it as the operation variable, update the display to show 0. 
+			3. If User presses = button, calculate and update the result in display
+			4. When User presses AC button, show 0. 
+
+
+		*/
+
+
+//create the global variable for display number 
+		var display_num1 = '';
+		var operation; 
+		var num1 = 0;
+
+
+
+//code for number
+		document.querySelector('#zero').onclick = function (){
+			display_num1 = display_num1 + document.querySelector("#zero").innerHTML;
+			document.querySelector('#display').value = display_num1;
+
+		}
+
+		document.querySelector('#one').onclick = function (){
+			display_num1 = display_num1 + document.querySelector("#one").innerHTML;
+			console.log(display_num1);
+			document.querySelector('#display').value = display_num1;
+
+		}
+
+
+
+		document.querySelector('#two').onclick = function (){
+			display_num1 = display_num1 + document.querySelector("#two").innerHTML;
+			console.log(display_num1);
+			document.querySelector('#display').value = display_num1;
+
+		}
+
+
+		document.querySelector('#three').onclick = function (){
+			display_num1 = display_num1 + document.querySelector("#three").innerHTML;
+			console.log(display_num1);
+			document.querySelector('#display').value = display_num1;
+
+		}
+
+
+		document.querySelector('#four').onclick = function (){
+			display_num1 = display_num1 + document.querySelector("#four").innerHTML;
+			console.log(display_num1);
+			document.querySelector('#display').value = display_num1;
+
+		}
+
+
+		document.querySelector('#five').onclick = function (){
+			display_num1 = display_num1 + document.querySelector("#five").innerHTML;
+			console.log(display_num1);
+			document.querySelector('#display').value = display_num1;
+
+		}
+
+
+		document.querySelector('#six').onclick = function (){
+			display_num1 = display_num1 + document.querySelector("#six").innerHTML;
+			console.log(display_num1);
+			document.querySelector('#display').value = display_num1;
+
+		}
+
+
+
+		document.querySelector('#seven').onclick = function (){
+			display_num1 = display_num1 + document.querySelector("#seven").innerHTML;
+			console.log(display_num1);
+			document.querySelector('#display').value = display_num1;
+
+		}
+
+
+
+		document.querySelector('#eight').onclick = function (){
+			display_num1 = display_num1 + document.querySelector("#eight").innerHTML;
+			console.log(display_num1);
+			document.querySelector('#display').value = display_num1;
+
+		}
+
+
+
+		document.querySelector('#nine').onclick = function (){
+			display_num1 = display_num1 + document.querySelector("#nine").innerHTML;
+			console.log(display_num1);
+			
+			//clears the display (show 0)
+			document.querySelector('#display').value = display_num1;
+		}
+
+
+
+
+//code for operation 
+		document.querySelector('#plus').onclick = function (){
+			//store the display value as an Integer, the clear the value stored in display_num1
+			num1 = parseInt(display_num1); 
+			display_num1 = '';
+			console.log(num1);
+			
+			//save the operation 
+			operation = '+';
+
+			//clears the display (show 0)
+			document.querySelector('#display').value = 0;
+		}
+
+
+		document.querySelector('#minus').onclick = function (){
+			//store the display value as an Integer, the clear the value stored in display_num1
+			var num1 = parseInt(display_num1); 
+			display_num1 = '';
+			console.log(num1);
+			
+			//save the operation 
+			operation = '-';
+
+			//clears the display (show 0)
+			document.querySelector('#display').value = 0;
+			
+		}
+
+
+		document.querySelector('#divide').onclick = function (){
+			//store the display value as an Integer, the clear the value stored in display_num1
+			var num1 = parseInt(display_num1); 
+			display_num1 = '';
+			console.log(num1);
+			
+			//save the operation 
+			operation = '/';
+
+			//clears the display (show 0)
+			document.querySelector('#display').value = 0;
+		}
+			
+
+
+		document.querySelector('#multiply').onclick = function (){
+			//store the display value as an Integer, the clear the value stored in display_num1
+			num1 = parseInt(display_num1); 
+			display_num1 = '';
+			console.log(num1);
+			
+			//save the operation 
+			operation = 'x';
+
+			//clears the display (show 0)
+			document.querySelector('#display').value = 0;
+			
+		}
+
+		
+
+
+//operation = document.querySelector('#ope').innerHTML;
+		
+
+		//User presses the equal button, calculate
+		document.querySelector('#equal').onclick = function (){
+			var result = 0;
+
+			//store the second display value as an Integer, the clear the value stored in display_num1
+			var num2 = parseInt(display_num1);
+			display_num1 = '';
+			
+			if (operation=="+"){ //when user presses plus
+				result = num1 + num2;
+
+			}else if(operation=="-"){ //when user presses minus
+				result = num1 - num2;
+
+			}else if(operation=="x"){ //when user presses multiply
+				result = num1*num2;
+
+			}else if(operation=="/"){ //when user presses divide
+				result = num1/num2;
+			}else{
+				alert("Invalid operation!")
+			}
+
+			document.querySelector('#display').value = result;
+
+		}
+
+		//Clear the display value
+		document.querySelector('#clear').onclick = function (){
+
+			document.querySelector('#display').value = 0;
+			display_num1 = '';
+			operation = '';
+			num1 = 0;
+
+
+	
+
+		}
+
+
+	
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

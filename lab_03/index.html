@@ -271,17 +271,21 @@ document.querySelector('#item3').onclick = function(){
 			money = parseInt(money);
 			console.log(money);
 
+			if (money >= 0 ){ //positive value is entered
 
+				//add this value to the remaining balance 
+				balance += money 
+				
+				//update the value displayed on the screen
+				document.querySelector('#balance-value').innerHTML = balance;
+	
+			}else{ // if value other than number entered 
+				alert('Invalid value entered');
 
-			//add this value to the remaining balance 
-			balance += money 
-			
-			//update the value displayed on the screen
-			document.querySelector('#balance-value').innerHTML = balance;
-
+			}
 
 			//Clear the input field 
-			document.querySelector('#balance-input').value = '';
+				document.querySelector('#balance-input').value = '';
 
 		}
 
