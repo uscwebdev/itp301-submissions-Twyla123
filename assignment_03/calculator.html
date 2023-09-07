@@ -234,23 +234,32 @@
 			display_num1 = '';
 			
 			if (operation=="+"){ //when user presses plus
+				console.log("num1: " +num1);
 				result = num1 + num2;
 
 			}else if(operation=="-"){ //when user presses minus
+				console.log("num1: " +num1);
 				result = num1 - num2;
 
 			}else if(operation=="x"){ //when user presses multiply
+				console.log("num1: " +num1);
 				result = num1*num2;
 
 			}else if(operation=="/"){ //when user presses divide
+				console.log("num1: " +num1);
+				console.log("num2: " +num2);
 				result = num1/num2;
+				console.log("divide: " +result);
+			
 			}else{
-				alert("Invalid operation!")
+				alert("Invalid Operation!")
 			}
 
 			document.querySelector('#display').value = result;
 
 		}
+
+
 
 		//Clear the display value
 		document.querySelector('#clear').onclick = function (){
@@ -259,9 +268,6 @@
 			display_num1 = '';
 			operation = '';
 			num1 = 0;
-
-
-	
 
 		}
 
