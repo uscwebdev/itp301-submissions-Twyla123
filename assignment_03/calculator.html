@@ -177,7 +177,7 @@
 
 		document.querySelector('#minus').onclick = function (){
 			//store the display value as an Integer, the clear the value stored in display_num1
-			var num1 = parseInt(display_num1); 
+			num1 = parseInt(display_num1); 
 			display_num1 = '';
 			console.log(num1);
 			
@@ -192,9 +192,9 @@
 
 		document.querySelector('#divide').onclick = function (){
 			//store the display value as an Integer, the clear the value stored in display_num1
-			var num1 = parseInt(display_num1); 
+			num1 = parseInt(display_num1); 
 			display_num1 = '';
-			console.log(num1);
+			console.log("before"+num1);
 			
 			//save the operation 
 			operation = '/';
@@ -246,8 +246,8 @@
 				result = num1*num2;
 
 			}else if(operation=="/"){ //when user presses divide
-				console.log("num1: " +num1);
-				console.log("num2: " +num2);
+				console.log("divide num1: " +num1);
+				console.log("divide num2: " +num2);
 				result = num1/num2;
 				console.log("divide: " +result);
 			
