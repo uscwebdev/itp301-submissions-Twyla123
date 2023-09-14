@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+<title> Photo Gallery </title>
+
+ <meta charset="UTF-8">
+  <meta name="description" content="Photo Gallery">
+  <meta name="keywords" content="Photo Gallery">
+  <meta name="author" content="Twyla Zhang">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+	#container{
+		width: 1100px;
+		margin: 0px auto;
+	}
+	
+	h1{
+		text-align: center;
+	}
+
+	img{
+		height: 220px;
+		width: auto;
+		padding: 5px;
+		float: left;
+	}
+
+	.row{
+		margin: 30px;
+	}
+
+	#main{
+		height: 450px;
+		width: auto;
+		padding: 10px;
+		margin: 40px 180px;
+	}
+
+
+	/* add clearfloat class */
+	.clearfloat{
+		clear: both;
+	}
+
+	#caption{
+		text-align: center;
+		font-size: 25px;
+		margin: 10px 90px 100px 10px;
+	}
+
+
+</style>
+
+</head>
+
+
+
+
+<body>
+
+<div id="container">
+	<h1> Twyla's Photo Gallery</h1>
+
+
+	<div class="row">
+	<img id="pic1" src="img/1.jpg" alt="photo 1">
+	<img id="pic2" src="img/2.jpg" alt="photo 2">
+	<img id="pic3" src="img/3.jpg" alt="photo 3">
+	<div class="clearfloat"></div>
+	</div>
+
+	<div class="row">
+	<img id="pic4" src="img/4.jpg" alt="photo 4">
+	<img id="pic5" src="img/5.jpg" alt="photo 5">
+	<img id="pic6" src="img/6.jpg" alt="photo 6">
+	<div class="clearfloat"></div>
+	</div>
+
+
+	
+	<img id="main" src="img/1.jpg" alt="photo 1">
+	<div class="clearfloat"></div>
+	<p id="caption">photo 1</p>
+		
+
+
+
+
+</div>
+
+
+
+<script>
+
+
+
+	//variable that stores a list of all images
+	var img = document.querySelectorAll('img');
+
+	// create an array of thumbnail images and excludes the last element because it // is the main image.
+	// var thumbnail = []; 
+	// for(i = 0; i < (img.length-1); i++){
+	// 	thumbnail.push(img[i]);
+	// }
+	
+	//console.log(thumbnail);
+
+	//a function that changes the main image to other image
+	var change_main = function (src, alt) {
+		document.querySelector('#main').src = src;
+	 	document.querySelector('#main').alt = alt;
+	 	document.querySelector("#caption").innerHTML = alt;
+
+	}
+
+
+	//loop through the array and bind event handler
+	for(i = 0; i < img.length; i++){
+		img[i].onclick = function(){
+			console.log(this);
+			var src = this.src;
+			var alt = this.alt;
+			console.log(src);
+			console.log(alt);
+			
+			change_main(src, alt);
+		}
+
+		
+	}
+	
+
+	
+
+	// document.querySelector('#pic1').onclick = function(){
+	// 		document.querySelector('#main').src = "img/1.jpg";
+	// 		document.querySelector('#main').alt = "photo 1";
+		
+	// }
+
+	// document.querySelector('#pic2').onclick = function(){
+	// 		document.querySelector('#main').src = "img/2.jpg";
+	// 		document.querySelector('#main').alt = "photo 2";
+		
+	// }
+
+	// document.querySelector('#pic3').onclick = function(){
+	// 		document.querySelector('#main').src = "img/3.jpg";
+	// 		document.querySelector('#main').alt = "photo 3";
+		
+	// }
+
+	// document.querySelector('#pic4').onclick = function(){
+	// 		document.querySelector('#main').src = "img/4.jpg";
+	// 		document.querySelector('#main').alt = "photo 4";
+		
+	// }
+
+	// document.querySelector('#pic5').onclick = function(){
+	// 		document.querySelector('#main').src = "img/5.jpg";
+	// 		document.querySelector('#main').alt = "photo 5";
+		
+	// }
+
+	// document.querySelector('#pic6').onclick = function(){
+	// 		document.querySelector('#main').src = "img/6.jpg";
+	// 		document.querySelector('#main').alt = "photo 6";
+		
+	// }
+
+
+</script>
+
+
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
