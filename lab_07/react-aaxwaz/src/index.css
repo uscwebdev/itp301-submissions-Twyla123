@@ -1,0 +1,48 @@
+img{
+  width: 400px;
+  height: auto;
+}
+
+body{
+  background-color: aliceblue;
+
+}
+
+.container{
+  margin: 0px auto;
+  background-color:#FCC8D1;
+  width: 900px;
+  height: auto;
+  padding: 50px 0px 50px 300px;
+  
+  
+
+}
+
+h1{
+  padding-left: 200px;
+}
+
+.left{
+  float: left;
+  margin: 40px 10px 30px 10px;
+  margin-left: 40px;
+}
+
+.image{
+  margin: 50px;
+  padding-left: 30px;
+ 
+}
+
+.image h3{
+  padding-left: 150px;
+}
+
+
+
+.clear{
+  clear: both;
+}
+
+
