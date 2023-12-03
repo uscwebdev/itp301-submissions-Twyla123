@@ -1,0 +1,55 @@
+/* CSS for Resume */
+
+.resume {
+  width: 80%;
+  margin: 0px auto;
+  padding: 20px;
+  
+}
+
+.resume-header {
+  text-align: center;
+}
+
+.resume-header h1 {
+  margin-bottom: 0;
+}
+
+.resume-header p {
+  margin-top: 5px;
+}
+
+.education{
+  float: left;
+  margin: 20px 40px;
+}
+
+.mascot{
+  width: 200px;
+  height: auto;
+  float: left;
+  margin: 20px 40px;
+}
+
+.section {
+  margin: 60px 0px;
+}
+
+.section h2 {
+  background-color: #164863;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+}
+
+
+.institution h3 {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.institution p {
+  font-size: 16px;
+  margin-top: 3px;
+}
+

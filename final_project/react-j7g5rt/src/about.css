@@ -1,0 +1,38 @@
+/* CSS for About Me  */
+.aboutP{
+  border: #000;
+  background-color: #93BFCF;
+  width: 800px;
+  margin: 0px auto;
+  font-size: 25px;
+  padding: 30px;
+
+}
+
+header{
+  background-color: aliceblue;
+  padding: 10px;
+}
+
+
+
+.column{
+  border: 2px inset #000;
+  margin: 30px 60px 30px 50px;
+  padding: 20px;
+  width: 450px;
+  height: auto;
+  float: left;
+  font-size: 1.2em;
+  text-align: center;
+  
+}
+
+.column img{
+  width: 300px;
+  height: auto;
+
+}
+
+
+

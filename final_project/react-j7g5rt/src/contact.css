@@ -1,0 +1,21 @@
+#contact{
+  width: 850px;
+  margin: 0px auto;
+  color: black;
+  padding: 40px 0px 20px 40px;
+  height: 500px;
+  border: 50px solid #8EACCD;
+  border-radius: 19px 45px;
+  background-color: #D2E0FB;
+   
+}
+
+.form-row{
+  margin: 35px;
+}
+
+label{
+  margin: 0px 10px;
+}
+
+
